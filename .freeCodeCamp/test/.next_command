@@ -345,3 +345,13 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 ./queries.sh
 ./queries.sh
+git status
+git remote set-url https://github.com/SalamiASB/worldcup-database-submission.git
+git remote set-url origin https://github.com/SalamiASB/worldcup-database-submission.git
+git branch -M main
+git push -u origin main
+git add expected_output.txt games.csv insert_data.sh queries.sh worldcup2.sql worldcup.sql
+git push -u origin main
+ls --color=auto
+git add worldcup.sql
+git push -u origin main
